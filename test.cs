@@ -12,6 +12,9 @@ public class Program
 		int index = FindEvenIndex(new int[] {1,100,50,-51,1,1});
 		Console.WriteLine("Index for 1,3,4,-51,4,1,3 is  : " + index);
 		Console.WriteLine(" ****************************** ");
+		int years = CalculateYears(1000,0.05,0.18,900);
+		Console.WriteLine("Years to get 900 : " + years);
+		
 	}
 	
 	public static int CalculateYears(Double principal, Double interest, Double tax, Double desiredPrincipal)
@@ -118,7 +121,7 @@ public class Program
 			public int GetSum(int a, int b)
 			{
 			//write your code here!
-			}\
+			}
 		
 		*/
 		try{
