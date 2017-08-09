@@ -1,5 +1,4 @@
 
-
 using System;
 					
 public class Program
@@ -13,6 +12,28 @@ public class Program
 		int index = FindEvenIndex(new int[] {1,100,50,-51,1,1});
 		Console.WriteLine("Index for 1,3,4,-51,4,1,3 is  : " + index);
 		Console.WriteLine(" ****************************** ");
+	}
+	
+	public static int CalculateYears(Double principal, Double interest, Double tax, Double desiredPrincipal)
+	{
+		try{
+			if(principal > desiredPrincipal || principal == desiredPrincipal)
+				return 0;
+			int years = 0;
+			Double amount = principal;
+			
+			while(amount < desiredPrincipal){
+				Double new_interest = amount*interest;
+				Double tax_On_interest = new_interest * tax;
+				amount = amount + new_interest - tax_On_interest;
+				years++;
+			}
+			
+			return years;
+		}catch(Exception){
+			throw;
+		}
+		
 	}
 	
 	public static int getRangeSum(int[] arr, int start, int end){
@@ -123,4 +144,6 @@ public class Program
 	    
 		
 	}
+	
+	
 }
